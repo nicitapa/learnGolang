@@ -1,23 +1,15 @@
-package main
+package Leson5
 
 import (
 	"errors"
 	"fmt"
 )
 
-func divide(a, b int) (int, error) {
-	if b == 0 {
-		return 0, errors.New("ошибка: деление на ноль невозможно")
-	}
-	return a / b, nil
-}
-
 func main() {
 	for {
 		var a, b int
 		fmt.Println("Введите два целых числа (a и b):")
 
-		// Проверка корректности ввода
 		_, err := fmt.Scanln(&a, &b)
 		if err != nil {
 			fmt.Println("Ошибка ввода. Пожалуйста, введите два целых числа.")
@@ -30,7 +22,6 @@ func main() {
 		} else {
 			fmt.Printf("Результат деления: %d\n", result)
 
-			// Выбор сообщения в зависимости от результата
 			switch {
 			case result > 10:
 				fmt.Println("Результат большой")
@@ -41,7 +32,6 @@ func main() {
 			}
 		}
 
-		// Повтор операции
 		var answer string
 		fmt.Println("Хотите повторить операцию? (да/нет):")
 		fmt.Scanln(&answer)
@@ -49,4 +39,11 @@ func main() {
 			break
 		}
 	}
+}
+
+func divide(a, b int) (int, error) {
+	if b == 0 {
+		return 0, errors.New("ошибка: деление на ноль невозможно")
+	}
+	return a / b, nil
 }
