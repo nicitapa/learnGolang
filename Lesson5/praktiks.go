@@ -1,4 +1,4 @@
-package Leson5
+package Lesson5
 
 func lesson() {
 	// 1
