@@ -6,14 +6,6 @@ import (
 	"os"
 )
 
-package main
-
-import (
-"encoding/xml"
-"fmt"
-"os"
-)
-
 type Book struct {
 	Title string xml:"title"
 	Year  int    xml:"year"
