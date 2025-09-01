@@ -1,4 +1,4 @@
-package main
+package Lesson10
 
 import (
 	"encoding/json"
@@ -11,7 +11,7 @@ type User struct {
 	Age  int    json:"age"
 }
 
-func mainfunc() {
+func main() {
 	data, err := os.ReadFile("users.json")
 	if err != nil {
 		fmt.Println("Ошибка при чтении файла:", err)
