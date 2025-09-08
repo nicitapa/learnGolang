@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS users(
+                      id SERIAL primary key ,
+                      name TEXT,
+                      email TEXT UNIQUE,
+                      age INT,
+                      is_active BOOLEAN,
+                      created_at TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS order (
+    id SERIAL PRIMARY KEY,
+    user_id INT,
+    product TEXT,
+    amount INT,
+    create_at timestamp,
+    FOREIGN KEY (user_id) REFERENCES usaer(id)
+);
